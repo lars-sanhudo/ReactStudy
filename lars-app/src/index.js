@@ -5,6 +5,7 @@ import App3 from './App3';
 import App4 from './App4';
 //import Jsx from './Jsx';
 import Welcome from './Welcome';
+import NestedProps from './NestedProps';
 
 
 /*
@@ -72,6 +73,29 @@ welcomeRoot.render(
     <Welcome name = "Sanhudo"/>
   </React.StrictMode>
 )
+
+
+const nestedRoot = ReactDOM.createRoot(
+  document.getElementById("nested-props")
+);
+
+const nestedPropsprops = {
+  date: new Date().toLocaleString(),
+  text: "Testing some features",
+  author: {
+    name: "Lars Leonardo"
+  }
+};
+
+nestedRoot.render(
+  <React.StrictMode>
+    <NestedProps
+      date = {nestedPropsprops.date}
+      text = {nestedPropsprops.text}
+      author = {nestedPropsprops.author}
+    />
+  </React.StrictMode>
+);
 
 
 

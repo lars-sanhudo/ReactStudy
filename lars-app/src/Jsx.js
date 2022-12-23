@@ -1,7 +1,6 @@
 //const name = 'Lars Sanhudo';
 //const element = <h1>Hello, {name}</h1>;
 
-import { Component, createElement } from "react";
 
 
 
